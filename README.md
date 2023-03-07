@@ -54,15 +54,6 @@ En mi caso utilizé [Mailtrap][mailtrap] (Solo es necesario registrarse y copiar
 ```sh
 APP_URL=http://127.0.0.1:8000
 ```
-## Ejecutar las migraciones
-```sh
-php artisan migrate
-```
-NOTA: Es necesario tener mysql corriendo, ya sea como servicio en linux o a traves de programas como XAMP o Laragon (Windows).
-## Ejecutar el seed (crear las categorías y algunos usuarios random)
-```sh
-php artisan db:seed
-```
 ## Instalar dependencias con Composer y NPM
 ```sh
 composer install
@@ -70,6 +61,20 @@ composer install
 ```sh
 npm install 
 ```
+## Ejecutar las migraciones
+```sh
+php artisan migrate
+```
+NOTA: Es necesario tener mysql corriendo, ya sea como servicio en linux o a traves de programas como XAMP o Laragon (Windows).
+Si presenta problemas con la creación de la base de datos o no aparece el prompt para crearlo, entonces creela manualmente y edite el nombre en el archivo .env
+```sh
+DB_DATABASE=gml_prueba_tecnica
+```
+## Ejecutar el seed (crear las categorías y algunos usuarios random)
+```sh
+php artisan db:seed
+```
+
 ## Compilar dev o prod
 ```sh
 npm run build
